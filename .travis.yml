@@ -10,19 +10,9 @@ matrix:
           packages:
             - g++-5
           sources: &sources
-            - llvm-toolchain-precise
+            - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
-            # safelist
-branches:
-  only:
-  - master
-  - stable
-  # blocklist
-branches:
-  except:
-  - legacy
-  - experimental
-script:
-- mkdir build
-- cd build
-- cmake .. && make
+          script:
+           - mkdir build
+           - cd build
+           - cmake .. && make
