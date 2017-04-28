@@ -22,7 +22,7 @@ SCENARIO("search")
 	bool b;
 	tree.insert(7);
 	b = tree.check_search(7);
-	REQUIRE(a == true);
+	REQUIRE(b == true);
 }
 
 SCENARIO("size")
